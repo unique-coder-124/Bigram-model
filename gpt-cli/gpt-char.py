@@ -68,14 +68,14 @@ dropout = 0.0
 # ------------
 
 # path for saving and loading models
-model_path = './models/model_char.pt'
+model_path = '../models/model_char.pt'
 
 torch.manual_seed(1337)
 
 load_model = input(CYAN + "Would you like to load A pre-existing model? (yes(Y)/no(N)): " + RESET)
 
 if load_model.lower() == 'y':
-    pre_trained_path = 'models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
+    pre_trained_path = '../models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
     model_path = pre_trained_path if os.path.isfile(pre_trained_path) else model_path
     checkpoint = torch.load(model_path)
     n_embd = checkpoint['n_embd']
@@ -257,7 +257,7 @@ if load_model.lower() == 'y':
     model = model.to(device)
     print("Model loaded.")
 else:
-    training_data = './training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
+    training_data = '../training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
     file_stat = os.stat(training_data)
     print(file_stat.st_size)
     print('reading ' + str(min(10000000, file_stat.st_size)) + ' bytes')
@@ -332,7 +332,7 @@ else:
     # Closing the progress bar
     pbar.close()
     
-    model_path = './models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
+    model_path = '../models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
     # save the model
     torch.save({
         'model_state_dict': model.state_dict(),
