@@ -53,7 +53,7 @@ BG_WHITE = '\033[47m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
-training_data = './training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
+training_data = '../training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
 batch_size = eval(input(BLUE + 'batch size \'powers of 2\': ' + RESET)) # how many independent sequences will we process in parallel?
 block_size = eval(input(BLUE + 'block size \'powers of 2\' (atleast 2 times batch size): ' + RESET)) # what is the maximum context length for predictions?
 chunk_size = eval(input(BLUE + 'file chunk size \'powers of 2\' (atleast 2 times block size): ' + RESET))
@@ -75,7 +75,7 @@ dropout = 0.0
 # ------------
 
 # path for saving and loading models
-model_path = './models/model.pt'
+model_path = '../models/model.pt'
 
 load_model = input(CYAN + "Would you like to load A pre-existing model? (yes(Y)/no(N)): " + RESET)
 print('file size: ' + str(file_stat.st_size))
@@ -271,7 +271,7 @@ class BigramLanguageModel(nn.Module):
         return idx
 
 if load_model.lower() == 'y':
-    pre_trained_path = 'models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
+    pre_trained_path = '../models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
     model_path = pre_trained_path if os.path.isfile(pre_trained_path) else model_path
     checkpoint = torch.load(model_path)
     n_embd = checkpoint['n_embd']
@@ -400,7 +400,7 @@ else:
         else:
             pass
 
-    model_path = './models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
+    model_path = '../models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
     # save the model
     torch.save({
         'model_state_dict': model.state_dict(),
