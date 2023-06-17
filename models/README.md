@@ -1,7 +1,10 @@
 # MODELS
 __The only setting that has to be the same when loading a model is 'training data'.__ 
 
-This will be changed in future iterations. 
+~~This will be changed in future iterations.~~
+This is not the case for newer models as they can be loaded with gpt-char.py. the char models are not compatible with the main script. 
+
+models that can be used without specifying training data will be labelled 'char model'. 
 
 ## model.pt
 > Block size: 64
@@ -11,6 +14,19 @@ This will be changed in future iterations.
 > Training iters: 10000
 >
 > Training data: input.txt __(the entire works of shakespear)__
+>
+> main model
+
+## model_char.pt
+> Block size: 64
+> 
+> Batch size: 128
+>
+> Training iters: 10000
+>
+> Training data: input.txt __(the entire works of shakespear)__
+>
+> char model
 
 ## 05loss_chess.pt
 coming soon
