@@ -52,6 +52,10 @@ conda install pysimplegui
 ```
 
 ## How to use
+> When loading a pretrained model ensure you set the training data to be the same as the one initially used to train the model. 
+> 
+> 
+> This is temorary as the characters must be loaded the same as when trained. I will be including code that includes the characters as part of the model in the future but for now this is the solution.
 ### Full CLI
 #### Base code
 ```bash
