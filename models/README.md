@@ -11,3 +11,6 @@ This will be changed in future iterations.
 > Training iters: 10000
 >
 > Training data: input.txt __(the entire works of shakespear)__
+
+## 05loss_chess.pt
+coming soon
