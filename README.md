@@ -44,7 +44,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightl
 #### __Installing all other modules__
 > works on 'Mac', 'Windows' and 'Linux'
 ```bash
-conda install tqdm threading
+conda install tqdm
 ```
 #### __For use of the gui script__
 ```bash
