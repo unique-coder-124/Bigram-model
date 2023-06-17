@@ -41,10 +41,10 @@ CYAN = '\033[36m'
 WHITE = '\033[37m'
 
 # path for saving and loading models
-model_path = './models/model.pt'
+model_path = '../models/model.pt'
 
 load_model = sg.popup_get_text("Would you like to load A pre-existing model? (yes(Y)/no(N)): ")
-training_data = './training_data/' + sg.popup_get_text('training data path (include file extention): ')
+training_data = '../training_data/' + sg.popup_get_text('training data path (include file extention): ')
 file_stat = os.stat(training_data)
 sg.popup('reading ' + str(min(10000000, file_stat.st_size)) + ' bytes')
 
@@ -228,7 +228,7 @@ class BigramLanguageModel(nn.Module):
         return idx
 
 if load_model.lower() == 'y':
-    pre_trained_path = 'models/' + input('default(model.pt) specify model path: ')
+    pre_trained_path = '../models/' + input('default(model.pt) specify model path: ')
     model_path = pre_trained_path if os.path.isfile(pre_trained_path) else model_path
     checkpoint = torch.load(model_path)
     n_embd = checkpoint['n_embd']
@@ -291,7 +291,7 @@ else:
     # Closing the progress bar
     pbar.close()
     
-    model_path = './models/' + str(input('save model as: ')) + '.pt'
+    model_path = '../models/' + str(input('save model as: ')) + '.pt'
     # save the model
     torch.save({
         'model_state_dict': model.state_dict(),
