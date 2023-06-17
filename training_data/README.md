@@ -1,7 +1,7 @@
 # TRAINING DATA
 
 ## input.txt
-this is the entire works of shakespear. 
+this is the entire works of Shakespeare. 
 
 ## chess.pgn
-comming soon
+coming soon
