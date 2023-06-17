@@ -68,10 +68,10 @@ dropout = 0.0
 # ------------
 
 # path for saving and loading models
-model_path = './models/model.pt'
+model_path = '../models/model.pt'
 
 load_model = input(CYAN + "Would you like to load A pre-existing model? (yes(Y)/no(N)): " + RESET)
-training_data = './training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
+training_data = '../training_data/' + input(MAGENTA + 'training data path (include file extention): ' + RESET)
 file_stat = os.stat(training_data)
 print(file_stat.st_size)
 print('reading ' + str(min(10000000, file_stat.st_size)) + ' bytes')
@@ -319,7 +319,7 @@ else:
     # Closing the progress bar
     pbar.close()
     
-    model_path = './models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
+    model_path = '../models/' + str(input(MAGENTA + 'save model as: ' + RESET)) + '.pt'
     # save the model
     torch.save({
         'model_state_dict': model.state_dict(),
