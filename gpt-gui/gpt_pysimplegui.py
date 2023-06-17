@@ -11,11 +11,22 @@ from tqdm import tqdm
 sg.popup("OS name is: " + os.name)
 
 if torch.backends.mps.is_available() and torch.backends.mps.is_built():
-    device = 'mps'
+    if input('mps or cpu: ') == 'mps':
+        device = 'mps'
+        print('device mps')
+    else:
+        device = 'cpu'
+        print('device cpu')
 elif torch.cuda.is_available():
-    device = 'cuda'
+    if input('cuda or cpu: ') == 'cuda':
+        device = 'cuda'
+        print('device cuda')
+    else:
+        device = 'cpu'
+        print('device cpu')
 else:
     device = 'cpu'
+    print('device cpu')
     
 # hyperparameters
 batch_size = int(sg.popup_get_text('batch size \'powers of 2\': ')) # how many independent sequences will we process in parallel?
