@@ -29,7 +29,7 @@ conda activate <your_environment_name>
 <br>
 
 Once the environment is created you can install all the required packages.
-> This cannot be done through a requirements.txt as __cuda__ and __mps__ support is not available in the base install of pytorch.
+> This cannot be done through a requirements.txt as __cuda__ and __mps__ support is unavailable in the base install of pytorch.
 
 #### __'Mac' torch download__
 ```bash
