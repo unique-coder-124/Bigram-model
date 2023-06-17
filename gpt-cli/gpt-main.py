@@ -256,7 +256,7 @@ class BigramLanguageModel(nn.Module):
         return idx
 
 if load_model.lower() == 'y':
-    pre_trained_path = 'models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
+    pre_trained_path = '../models/' + str(input(MAGENTA + 'default(model.pt) specify model path: ' + RESET))
     model_path = pre_trained_path if os.path.isfile(pre_trained_path) else model_path
     checkpoint = torch.load(model_path)
     n_embd = checkpoint['n_embd']
