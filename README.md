@@ -65,10 +65,22 @@ conda install pysimplegui
 
 ### Full CLI
 #### Base code
+> Good base code used as the template for everything else. 
 ```bash
 python gpt-main.py
 ```
+#### Character Model
+> The dictionary of the model is stored in the model file with this code. 
+```bash
+python gpt-char.py
+```
 #### Loading Training data in blocks to save on memory
+> This loads the training file in chunks to save on memory usage and avoid crashing. the chunk size can be specified. 
+>
+> You can use Python expressions in this code.
+>
+> e.g. Chunk Size: 2**20
+> e.g. Block Size: 2**6
 ```bash
 python gpt-file-loader-experimental.py
 ```
