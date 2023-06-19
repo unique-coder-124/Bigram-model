@@ -80,7 +80,7 @@ python gpt-char.py
 > You can use Python expressions in this code.
 >
 > e.g. Chunk Size: 2**20
-> e.g. Block Size: 2**6
+> e.g. Block Size: 2+7-1
 ```bash
 python gpt-file-loader-experimental.py
 ```
@@ -89,3 +89,14 @@ python gpt-file-loader-experimental.py
 ```bash
 python gpt_pysimplegui
 ```
+
+### Parameters
+> Batch size: number of samples processed before the model is updated
+>
+> Block size: the context that the model understands in tokens (1 token = 1 letter/character)
+>
+> max training iters: the number of training cycles
+>
+> max tokens: max response length (1 token = 1 letter/character)
+>
+> prompt: leave empty to exit script (prompt does not provide differentiation between the user and ai due to the simplicity of the ai this would reduce the quality of the results. there is a new line printed after the response so the ai will always responds in a separate paragraph.)
