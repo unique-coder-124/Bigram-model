@@ -1,4 +1,4 @@
-# My version of GPT Bigram
+# My version of Bigram model
 
 ## Credit
 #### Original Code:
