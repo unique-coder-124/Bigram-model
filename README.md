@@ -11,7 +11,7 @@
   * [Overview](#overview)
   * [Installations](#installations)
       - [Anaconda](#anaconda)
-      - [setup](#setup)
+      - [Setup](#setup)
   * [How to use](#how-to-use)
     + [Full CLI](#full-cli)
       - [Base code](#base-code)
