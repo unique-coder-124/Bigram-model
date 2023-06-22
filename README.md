@@ -10,8 +10,8 @@
 ## Table of contents
   * [Overview](#overview)
   * [Installations](#installations)
-      - [__Anaconda__](#anaconda)
-      - [__setup__](#setup)
+      - [Anaconda](#anaconda)
+      - [setup](#setup)
   * [How to use](#how-to-use)
     + [Full CLI](#full-cli)
       - [Base code](#base-code)
@@ -45,7 +45,7 @@ conda activate <your_environment_name>
 Once the environment is created you can install all the required packages.
 > This cannot be done through a requirements.txt as __cuda__ and __mps__ support is unavailable in the base install of pytorch.
 
-#### setup
+#### Setup
 ```bash
 python setup.py
 ```
