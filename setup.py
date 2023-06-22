@@ -7,7 +7,7 @@ def get_cuda_version():
         output = subprocess.check_output(["nvcc", "--version"])
         output = output.decode('utf-8')
         version_line = [line for line in output.split('\n') if 'release' in line][0]
-        version = version_line.split(' ')[-1].replace(',', '')
+        version = version_line.split(' ')[-2].replace(',', '')
         return version.replace('.', '')
     except Exception as e:
         print(f"An error occurred: {e}")
