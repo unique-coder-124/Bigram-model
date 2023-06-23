@@ -17,12 +17,19 @@ if torch.backends.mps.is_available() and torch.backends.mps.is_built():
         device = 'cpu'
         print('device cpu')
 elif torch.cuda.is_available():
-    if input('cuda or cpu: ') == 'cuda':
-        device = 'cuda'
-        print('device cuda')
+    num_gpus = torch.cuda.device_count()
+    if num_gpus > 1:
+        print(f"{num_gpus} GPUs are available.")
+        gpu_id = int(input(f"Choose a GPU (0-{num_gpus-1}): "))
+        device = f'cuda:{gpu_id}'
+        print(f'device {device}')
     else:
-        device = 'cpu'
-        print('device cpu')
+        if input('cuda or cpu: ') == 'cuda':
+            device = 'cuda'
+            print('device cuda')
+        else:
+            device = 'cpu'
+            print('device cpu')
 else:
     device = 'cpu'
     print('device cpu')

@@ -18,22 +18,30 @@ def install_requirements():
     os_type = platform.system().lower()
 
     if os_type == "darwin":  # MacOS
+        print('Mac OS mps download')
         torch_command = ["pip", "install", "--pre", "torch", "torchvision", "torchaudio", "--index-url", "https://download.pytorch.org/whl/nightly/cpu"]
     elif os_type in ["linux", "windows"]:  # Linux or Windows
         cuda_version = get_cuda_version()
         if cuda_version is None and os_type == "windows":
+            print('cpu download windows')
             torch_command = ["pip", "install", "torch", "torchvision", "torchaudio"]
         elif cuda_version is None:
+            print('cpu download linux')
             torch_command = ["pip", "install", "--pre", "torch", "torchvision", "torchaudio", "--index-url", "https://download.pytorch.org/whl/nightly/cpu"]
         elif int(cuda_version) < 117:
+            print(f'cuda: {cuda_version}, os: {os_type}')
             torch_command = ["pip", "install", "torch", "torchvision", "torchaudio", "--index-url", f"https://download.pytorch.org/whl/cu{cuda_version}"]
         elif int(cuda_version) == 117:
+            print(f'cuda: {cuda_version}, os: {os_type}')
             torch_command = ["pip", "install", "torch", "torchvision", "torchaudio", "--index-url", f"https://download.pytorch.org/whl/cu{cuda_version}"]
         elif int(cuda_version) == 118:
+            print(f'cuda: {cuda_version}, os: {os_type}')
             torch_command = ["pip", "install", "--pre", "torch", "torchvision", "torchaudio", "--index-url", f"https://download.pytorch.org/whl/nightly/cu{cuda_version}"]
         else:
+            print(f'cuda: {cuda_version}, os: {os_type}')
             torch_command = ["pip", "install", "--pre", "torch", "torchvision", "torchaudio", "--index-url", f"https://download.pytorch.org/whl/nightly/cu{cuda_version}"]
     else:
+        print(f'torch unavailable on this operating system: {os_type}')
         raise ValueError("Unsupported operating system: " + os_type)
 
     # install PyTorch
