@@ -16,7 +16,8 @@
     + [Full CLI](#full-cli)
       - [Base code](#base-code)
       - [Character Model](#character-model)
-      - [Loading Training data in blocks to save on memory](#loading-training-data-in-blocks-to-save-on-memory)
+      - [Chunk loading training data (experimental branch)](#Chunk-loading-training-data-(experimental-branch))
+      - [Gradient checkpoint (experimental branch)](#Gradient-checkpoint-(experimental-branch))
     + [GUI](#gui)
       - [Partial GUI](#partial-gui)
     + [Parameters](#parameters)
@@ -73,7 +74,7 @@ python gpt-main.py
 ```bash
 python gpt-char.py
 ```
-#### Loading Training data in blocks to save on memory
+#### Chunk loading training data (experimental branch)
 > This loads the training file in chunks to save on memory usage and avoid crashing. the chunk size can be specified. 
 >
 > You can use Python expressions in this code.
@@ -82,6 +83,12 @@ python gpt-char.py
 > e.g. Block Size: 2+7-1
 ```bash
 python gpt-file-loader-experimental.py
+```
+
+#### Gradient checkpoint (experimental branch)
+> This loads the training using gradient checkpoints to save memory. 
+```bash
+python gpt-char-exp.py
 ```
 
 ### GUI
