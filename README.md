@@ -14,12 +14,7 @@
       - [Setup](#setup)
   * [How to use](#how-to-use)
     + [Full CLI](#full-cli)
-      - [Base code](#base-code)
-      - [Character Model](#character-model)
-      - [Chunk loading training data (experimental branch)](#Chunk-loading-training-data-'experimental-branch')
-      - [Gradient checkpoint 'experimental branch'](#Gradient-checkpoint-'experimental-branch')
     + [GUI](#gui)
-      - [Partial GUI](#partial-gui)
     + [Parameters](#parameters)
 
 ## Overview
