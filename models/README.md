@@ -6,7 +6,7 @@ This is not the case for newer models as they can be loaded with gpt-char.py. th
 
 models that can be used without specifying training data will be labelled 'char model'. 
 
-## model.pt
+### model.pt
 > Block size: 64
 > 
 > Batch size: 128
@@ -17,16 +17,13 @@ models that can be used without specifying training data will be labelled 'char 
 >
 > main model
 
-## model_char.pt
-> Block size: 64
+### model_char.pt
+> Block size: 128
 > 
-> Batch size: 128
+> Batch size: 256
 >
-> Training iters: 10000
+> Training iters: 100000
 >
 > Training data: input.txt __(the entire works of shakespear)__
 >
 > char model
-
-## 05loss_chess.pt
-coming soon
