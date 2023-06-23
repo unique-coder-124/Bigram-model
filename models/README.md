@@ -27,3 +27,14 @@ models that can be used without specifying training data will be labelled 'char 
 > Training data: input.txt __(the entire works of shakespear)__
 >
 > char model
+
+### 05losschess.pt
+> Block size: 128
+> 
+> Batch size: 256
+>
+> Training iters: 5000000
+>
+> Training data: DATABASE4U.pgn __(9 million chess games. Download url in training_data directory)__
+>
+> char model
