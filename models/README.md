@@ -35,6 +35,6 @@ models that can be used without specifying training data will be labelled 'char 
 >
 > Training iters: 5000000
 >
-> Training data: DATABASE4U.pgn __(9 million chess games)__
+> Training data: DATABASE4U.pgn __(9 million chess games. Download url in training_data directory)__
 >
 > char model

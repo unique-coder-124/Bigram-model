@@ -47,6 +47,10 @@ python setup.py
 ```
 
 ## How to use
+
+```bash
+python start.py
+```
 > When loading a pretrained model ensure you set the training data to be the same as the one initially used to train the model. 
 > 
 > 
@@ -60,15 +64,13 @@ python setup.py
 
 ### Full CLI
 #### Base code
-> Good base code used as the template for everything else. 
-```bash
-python gpt-main.py
-```
+> Good base code used as the template for everything else.
+> 
+> ./gpt-cli/gpt-main.py
 #### Character Model
-> The dictionary of the model is stored in the model file with this code. 
-```bash
-python gpt-char.py
-```
+> The dictionary of the model is stored in the model file with this code.
+> 
+> ./gpt-cli/gpt-char.py
 #### Chunk loading training data (experimental branch)
 > This loads the training file in chunks to save on memory usage and avoid crashing. the chunk size can be specified. 
 >
@@ -76,23 +78,18 @@ python gpt-char.py
 >
 > e.g. Chunk Size: 2**20
 > e.g. Block Size: 2+7-1
-```bash
-python gpt-file-loader-experimental.py
-```
+> 
+> 
+> ./gpt-cli/gpt-file-loader-experimental.py
 
 #### Gradient checkpoint (experimental branch)
-> This loads the training using gradient checkpoints to save memory. 
-```bash
-python gpt-char-exp.py
-```
+> This loads the training using gradient checkpoints to save memory.
 
 ### GUI
-#### Partial GUI
-> some inputs replaced with text boxes using pysimplegui
-```bash
-python gpt_pysimplegui
-```
-
+#### char saving gui __(recomended)__
+> a full gui for the python code gpt-char using customtkinter
+> 
+> ./gpt-gui/gui.py
 ### Parameters
 > Batch size: number of samples processed before the model is updated
 >
