@@ -18,10 +18,10 @@
     + [Parameters](#parameters)
 
 ## Overview
-This is my own recreation of the gpt model by andrej karpathy made to be more user friendly. This is currently only lightly modefied but in the future I intend to replace the tokenizer with my own custom word level tokenizer and a fully functional gui. I also intend to translate this to a faster programming language such as __c__ or __c#__. 
+This is my own recreation of the gpt model by Andrej Karpathy made to be more user-friendly. In the future, I intend to replace the tokenizer with my own custom word-level tokenizer. I also intend to translate this to a faster programming language such as __c__, __c#__ or maybe even the upcoming programming language mojo. 
 
 ## Installations
-You should first install an interpreter or python environment.
+You should first install an interpreter or Python environment.
 
 (The following instructions will assume you have already installed anaconda)
 
@@ -51,16 +51,16 @@ python setup.py
 ```bash
 python start.py
 ```
-> When loading a pretrained model ensure you set the training data to be the same as the one initially used to train the model. 
+> When loading a pre-trained model ensure you set the training data to be the same as the one initially used to train the model. 
 > 
 > 
-> This is temorary as the characters must be loaded the same as when trained. I will be including code that includes the characters as part of the model in the future but for now this is the solution.
+> This is temporary as the characters must be loaded the same as when trained. I will be including code that includes the characters as part of the model in the future but for now, this is the solution.
 
 
-> When selecting a training file, the path is relative to the training_data directory. __YOU CANNOT USE ABSOLUTE PATHS__
+> When selecting a training file, the path is relative to the training_data directory. __YOU CAN NOT USE ABSOLUTE PATHS__
 > 
 > 
-> When selecting a model, the path is relative to the models directory. __YOU CANNOT USE ABSOLUTE PATHS__
+> When selecting a model, the path is relative to the models directory. __YOU CAN NOT USE ABSOLUTE PATHS__
 
 ### Full CLI
 #### Base code
@@ -86,8 +86,8 @@ python start.py
 > This loads the training using gradient checkpoints to save memory.
 
 ### GUI
-#### char saving gui __(recomended)__
-> a full gui for the python code gpt-char using customtkinter
+#### char saving gui __(recommended)__
+> A full GUI for the Python code gpt-char using customtkinter
 > 
 > ./gpt-gui/gui.py
 ### Parameters
